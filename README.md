@@ -34,22 +34,32 @@
 ---
 
 ### 2.1 셸 스크립트 만들기
-1. **파일 생성:** `touch hello.sh`
-2. **Shebang(시뱅) 작성:** 첫 번째 줄에 `#!/bin/bash` 추가 (Bash 셸로 실행함을 명시)
-3. **내용 작성:** `echo "Hello world"` 등 명령어 작성
-4. **실행 권한 부여:** `sudo chmod +x hello.sh`
-5. **실행:** `./hello.sh`
+1. **파일 생성:** touch hello.sh
+2. **Shebang(시뱅) 작성:** 첫 번째 줄에 #!/bin/bash 추가 (Bash 셸로 실행함을 명시)
+3. **내용 작성:** echo "Hello world" 등 명령어 작성
+4. **실행 권한 부여:** sudo chmod +x hello.sh
+5. **실행:** ./hello.sh
 
 ### 2.2 변수 사용하기
 * **사용 이유:** 같은 값을 여러 곳에서 사용할 때 값을 한곳에 저장하여 유지보수성과 가독성을 높이기 위해 사용합니다.
-* **변수 선언:** `name="Kim"` (주의: `=` 양쪽에 공백 금지)
-* **변수 출력:** `echo $name` 또는 `echo "${name}"`
-* **명령 결과 저장:** `today=$(date)` 또는 `today=`date``
+* **변수 선언:** name="Kim" (주의: = 양쪽에 공백 금지)
+* **변수 출력:** echo $name 또는 echo "${name}"
+* **명령 결과 저장:** today=$(date) 또는 today=`date`
 * **예제:**
-  ```bash
   today=$(date +%F)
   echo "$today"
 
+### 2.3 조건문
+* **개요:** 특정 조건이 참(True)일 때만 명령을 실행합니다.
+* **기본 문법 (if문):**
+  if [ 조건 ]; then
+      실행문
+  fi
+* **구조:**
+  * if - else
+  * if - elif - else
+  * case 문
+</details>
 
 
 
